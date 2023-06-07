@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Создать странциу с кнопкой "Запустить компьютер" и надпись 'Выключен компьютер'-->
+    <button onclick="clicker();">Запустить компьютер</button>
+    <p>Компьютер Выключен</p>
+    <!--При нажатии кнопку "Запустить компьютер", напдись на кнопке "компьютер выключить"-->
+    <script>
+        function clicker() {
+            let btn = document.querySelector('button');
+            let text = document.querySelector('p');
+            if (btn.innerText == 'Запустить компьютер') {
+                btn.innerText = 'Выключить компьютер';
+                //document.body.innerHTML = '<button>Выключить компьютер</button>';
+            } else {
+                btn.innerText = 'Запустить компьютер';
+            }
+        }
+    </script>
+</body>
+
+
+
+
+</html>

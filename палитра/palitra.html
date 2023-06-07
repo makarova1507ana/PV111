@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .btnred {
+        background-color: red;
+    }
+    
+    .btnblue {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <!-- Создать html-страницу с текстом и палитрой цветов.
+     При клике на цвет палитры, должен изменяться цвет текста на выбранный.
+      Для указания, какой ячейке какой цвет соответствует, можно использовать атрибут data-color 
+      в каждой ячейке, а потом с помощью JS получать необходимый цвет из этого атрибута.  -->
+    <button class="btnred" value="red" onclick="colorred();"></button>
+    <button class="btnblue" onclick="colorblue();"></button>
+    <input type="color" onclick="change_color();">
+    <p>
+        Создать html-страницу с текстом и палитрой цветов. При клике на цвет палитры, должен изменяться цвет текста на выбранный. Для указания, какой ячейке какой цвет соответствует, можно использовать атрибут data-color в каждой ячейке, а потом с помощью JS
+        получать необходимый цвет из этого атрибута.
+    </p>
+
+</body>
+<script>
+    function change_color() {
+        let p = document.querySelector('p');
+        let color = document.querySelector('input').value;
+        p.style.color = color;
+    }
+
+    function colorred() {
+        let p = document.querySelector('p');
+        p.style.color = "red";
+    }
+
+    function colorblue() {
+        let p = document.querySelector('p');
+        p.style.color = "blue";
+    }
+</script>
+
+</html>
