@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Создать html-страницу со списком новостей. Возле каждой
+новости должна быть кнопка Удалить, при нажатии на которую
+соответствующая новость исчезает. -->
+
+<body>
+
+    <table class="news">
+        <tr class="news1">
+            <th>Новость 1</th>
+            <td><button data-name="news1" class="btnRemove">delete</button></td>
+        </tr>
+        <tr class="news1">
+            <td>
+                <p>это текст</p>
+            </td>
+        </tr>
+        <tr class="news2">
+            <th>Новость 2</th>
+            <td><button data-name="news2" class="btnRemove">delete</button></td>
+        </tr>
+        <tr class="news2">
+            <td>
+                <p>это текст</p>
+            </td>
+        </tr>
+    </table>
+    <button class="addNews">add news</button>
+    <script src="script_news.js"></script>
+</body>
+
+</html>

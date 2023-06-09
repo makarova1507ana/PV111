@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button data-num='1' class="btn">button <strong>1</strong><a href="#">это ссылка</a></button>
+    <button class="btntwo"> button 2</button>
+    <button class="btnthree">3</button>
+
+</body>
+<script>
+    /* 1 способ
+                                    button = document.querySelector('.btn'); //button #id .btn
+                                    button2 = document.querySelector('.btntwo');
+                                    button3 = document.querySelector('.btnthree');
+
+
+                                    function f() {
+                                        console.log('нажата кнопка');
+                                    }
+
+                                    
+                                        button.addEventListener('click', f);
+                                        button.addEventListener('click', function f2() {
+                                            console.log('нажата кнопка2');
+                                        });
+                                        button2.addEventListener('click', f);*/
+
+    buttons = document.querySelectorAll('button');
+
+    f = (event) => {
+        console.log(event.target);
+        console.log(event.target.dataset);
+        console.log(event.target.dataset.num);
+        console.log(event.target.textContent);
+        console.log(event.currentTarget);
+
+
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', f);
+    })
+</script>
+
+</html>
