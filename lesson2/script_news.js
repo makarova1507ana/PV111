@@ -1,13 +1,21 @@
 buttons = document.querySelectorAll('.btnRemove');
 button_add_news = document.querySelector('.addNews');
-
-
+text_area=document.querySelector('textarea');
+num_news = 2
 function addNews() {
+
     tr = document.createElement('tr');
     p = document.createElement('p');
     document.querySelector('tbody').append(tr);
-    tr.outerHTML = '<tr class="news3"><th>Новость 3</th><td><button data-name="news1" class="btnRemove">delete</button></td></tr>'
-        // document.querySelector('table').append(td);
+    num_news ++;
+    tr.outerHTML = '<tr class="news'+String(num_news) +'"><th>Новость '+String(num_news) +'</th><td><button data-name="news'+String(num_news) +'" class="btnRemove">delete</button></td></tr>'
+    tr = document.createElement('tr');
+    tr.outerHTML = '  <tr class="news'+String(num_news)+'"><td><p>'+text_area.innerText+'</p></td></tr>'
+        buttons = document.querySelectorAll('.btnRemove');
+        buttons.forEach(button => {
+            button.addEventListener('click', removeBlock);
+        })
+        console.log(buttons)
 
 }
 
@@ -20,7 +28,5 @@ removeBlock = (event) => {
     })
 }
 
-buttons.forEach(button => {
-    button.addEventListener('click', removeBlock);
-})
+
 button_add_news.addEventListener('click', addNews);
